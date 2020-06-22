@@ -125,8 +125,6 @@ void CellBoard::SwitchBuffer() {
 struct Life {
     bool          haveErr   = false;   // Error encontered when manipulating the app.  Resets at every render call.
     bool          seed_mode = false;   // Whether the user can seed the board.
-    int           width     = 0;       // Current draw width on the screen.
-    int           height    = 0;       // Current draw height on the screen.
     SDL_Renderer *renderer  = nullptr; // Screen renderer.
 
     CellBoard board;
@@ -230,10 +228,6 @@ void Life::Update(double t, double dt) {
 // cell is rendered to the screen.  If seed mode is active then a
 // cell grid is rendered as well.
 void Life::Render() {
-    if (SDL_GetRendererOutputSize(renderer, &width, &height) < 0) {
-        SDL_Log("ERROR: SDL_GetRendererOutputSize: %s\n", SDL_GetError());
-        return;
-    }
     haveErr = false;
 
     SetDrawColor(255, 255, 255, 255);
