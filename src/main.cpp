@@ -379,6 +379,7 @@ int main() {
 
     Life       life(renderer);
     TimeKeeper timeKeeper;
+    TimeKeeper frameTime;
 
     // Variables to used for time keeping that updates the simulation
     // independent of the framerate.
@@ -444,6 +445,13 @@ int main() {
         }
 
         life.Render();
+
+        auto frameElapsed = frameTime.ElapsedTimeInSeconds();
+        auto thirtyFPS    = 0.0333;
+        if (frameElapsed < thirtyFPS) {
+            auto ms = (thirtyFPS - frameElapsed) * 1000.0;
+            SDL_Delay(ms);
+        }
     }
 EndMainLoop:
 
