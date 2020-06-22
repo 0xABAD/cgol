@@ -1,4 +1,4 @@
-#/bin/env bash
+#!/bin/bash
 
 # Before building, find the root directory where the .git folder exists.
 while [ 1 ]
