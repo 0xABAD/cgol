@@ -33,7 +33,7 @@ This assumes you have Visual Studio 2017 or greater installed on your machine.
   to build in x64 (e.g. "x64 Native Tools Command Prompt for VS 20XX").
 * Navigate to the root directory of this project.
 * Run `setup.bat` to download the SDL2 dependency.  This assumes a more recent
-  version (2018 or later) that comes with curl installed.
+  version of Windows (2018 or later) that comes with curl installed.
 * Run `build.bat`.
 
 ### Linux
