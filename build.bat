@@ -4,7 +4,7 @@ setlocal enableextensions
 set PROJDIR=%CD%
 set SRC=%PROJDIR%\src
 set VENDOR=%PROJDIR%\vendor
-set SDL=%VENDOR%\SDL2-devel-2.0.12-VC\SDL2-2.0.12
+set SDL=%VENDOR%\SDL2-2.0.12
 set SDLLIB=%SDL%\lib\x64
 
 set INCLUDES=-I%SDL%\include
